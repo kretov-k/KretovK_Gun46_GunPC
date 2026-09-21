@@ -4,36 +4,47 @@
     {
         static void Main(string[] args)
         {
-            int[] fibonacci = { 0, 1, 1, 2, 3, 5, 8, 13 };
+            //fibonacci
+            int a = 0;
+            int b = 1;
 
-            string[] monthsoftheyear =
+            for (int i = 0; i < 10; i++)
             {
-                "January", "February", "March", "April",
-                "Mary", "June", "July", "August",
-                "September", "October", "November", "December"
-            };
+                Console.Write(a + " ");
+                int f = a + b;
+                a = b;
+                b = f;
+            }
+            Console.WriteLine();
+            //even
+            for (int i = 2; i <= 20; i += 2)
+                Console.Write(i + " ");
 
-            int[,] matrix =
+            Console.WriteLine();
+            //multiplication table
+            for (int i = 1; i <= 5; i++)
             {
-                { 2, 3, 4 },
-                { 4, 9, 16 },
-                { 8, 27, 64 },
-            };
+                for (int m = 1;  m <= 5; m++)
+                {
+                    Console.Write(i * m + "  ");
+                }
+                Console.WriteLine();
+            }
+            //password
+            string password = "qwerty";
+            string pstry;
 
-            double[][] jagged = new double[3][];
-
-            jagged[0] =  new double[] {1, 2, 3, 4, 5};
-            jagged[1] = new double[] { Math.E, Math.PI };
-            jagged[2] = new double[] {
-                Math.Log10(1), Math.Log10(10), Math.Log10(100), Math.Log10(1000)
-            };
-
-            int[] array = { 1, 2, 3, 4, 5 };
-            int[] array2 = { 7, 8 , 9, 10, 11, 12, 13 };
-
-            Array.Copy(array, array2, 3);
-
-            Array.Resize(ref array, array.Length * 2);
+            do
+            {
+                Console.Write("Password: ");
+                pstry = Console.ReadLine();
+                if (pstry != password)
+                {
+                    Console.WriteLine("Wrong password, try again.");
+                }
+            }
+            while (pstry != password);
+            Console.WriteLine("Password is correct!");
         }
     }
 }
