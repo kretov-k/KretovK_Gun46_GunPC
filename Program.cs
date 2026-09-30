@@ -16,7 +16,7 @@
 
                 while (true)
                 {
-                    Console.WriteLine("Type new item: ");
+                    Console.WriteLine("Type a new item: ");
                     string input = Console.ReadLine();
 
                     if (input == "-exit")
