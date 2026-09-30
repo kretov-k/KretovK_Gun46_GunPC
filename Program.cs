@@ -33,7 +33,7 @@
                         Console.WriteLine(item);
                     }
 
-                    Console.WriteLine("Type new item to add in the middle of the list");
+                    Console.WriteLine("Type a new item to add in the middle of the list");
                     input = Console.ReadLine();
 
                     if (input == "-exit")
